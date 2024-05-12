@@ -9,31 +9,35 @@
 <body>
     <script>
 
-        const stuData = {
+        const booksData = {
                             "Books":
                             [
                                 {
+                                    "book": 1,
                                     "title":"The Great Gatsby",
                                     "author":"F. Scott Fitzgerald",
                                     "publication Year":1925,
-                                    "genres":["Fiction", "Classics"]
+                                    "genres":"Fiction, Classics"
                                 },
                                 {    
-                                
+                                    "book": 2,
                                     "title":"To Kill a Mockingbird",
                                     "author":"Harper Lee",
                                     "publication Year":1960,
-                                    "genres":["Fiction", "Coming-of-Age"]
+                                    "genres":"Fiction, Coming-of-Age"
 
                                 }
                             ]
                         };
+        // Display the title of the first book
+        console.log("Title of the first book: " + booksData.Books[0].title);
 
-        console.log(stuData.Books[0].title);
-        console.log(stuData.Books[0].author);
+        // Display the author of the second book
+        console.log("Author of the second book: " + booksData.Books[1].author);
 
-        // Loop through the students and display the subjects
-        stuData.Books.forEach(book => {
+        // Display the genres of all books
+        console.log("Genres of all books: ");
+        booksData.Books.forEach(book=> {
             console.log(book.genres);
         });
 
